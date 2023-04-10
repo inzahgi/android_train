@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_submit: //提交按钮的点击事件
+
+        if( view.getId() == R.id.btn_submit) {
                 getData();
                 if (TextUtils.isEmpty(name)) {
                     Toast.makeText(MainActivity.this, "请输入名字",
@@ -97,8 +97,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.i("MainActivity","注册的用户信息："+"名字："+name+", 邮箱："
                             +email+", 性别："+sex+", 兴趣爱好："+hobbys);
                 }
-                break;
         }
+//        switch (view.getId()) {
+//            case R.id.btn_submit: //提交按钮的点击事件
+//                getData();
+//                if (TextUtils.isEmpty(name)) {
+//                    Toast.makeText(MainActivity.this, "请输入名字",
+//                            Toast.LENGTH_SHORT).show();
+//                } else if (TextUtils.isEmpty(email)) {
+//                    Toast.makeText(MainActivity.this, "请输入邮箱",
+//                            Toast.LENGTH_SHORT).show();
+//                } else if (TextUtils.isEmpty(pwd)) {
+//                    Toast.makeText(MainActivity.this, "请输入密码",
+//                            Toast.LENGTH_SHORT).show();
+//                } else if (TextUtils.isEmpty(sex)) {
+//                    Toast.makeText(MainActivity.this, "请选择性别",
+//                            Toast.LENGTH_SHORT).show();
+//                } else if (TextUtils.isEmpty(hobbys)) {
+//                    Toast.makeText(MainActivity.this, "请选择兴趣爱好",
+//                            Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Toast.makeText(MainActivity.this, "注册成功",
+//                            Toast.LENGTH_SHORT).show();
+//                    Log.i("MainActivity","注册的用户信息："+"名字："+name+", 邮箱："
+//                            +email+", 性别："+sex+", 兴趣爱好："+hobbys);
+//                }
+//                break;
+//        }
     }
 
     @Override

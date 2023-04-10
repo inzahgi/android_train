@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:rotationX="-6">
+    android:layout_height="match_parent" >
 
     <TextView
         android:id="@+id/text_view_id"
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="wrap_content"
+        android:lines="1"
         android:gravity="center"
-        android:text="TextView控件显示的文本信息"
+        android:text="规划如何给个大概多少古典诗歌的TextView控件显示的文本信息"
         android:textColor="#FFF79E38"
         android:textSize="24sp"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+
+            android:drawableBottom="@drawable/ic_launcher_foreground"
+
+
+            android:maxLength="9"
+
+    />
 
 </RelativeLayout>
+
+
+
+
+    <!--        android:maxLength="9"-->
+
+    <!--        android:ellipsize="start|end"-->

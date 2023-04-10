@@ -50,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             tools:layout="@layout/left_layout" />
-        <fragment
+        <FrameLayout
             android:id="@+id/right"
             android:name="com.example.menu.RightFragment"
             android:layout_width="0dp"

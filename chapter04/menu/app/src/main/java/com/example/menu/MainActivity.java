@@ -1,9 +1,10 @@
 package com.example.menu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        fragmentManager = getFragmentManager();//获取fragmentManager
+        fragmentManager = getSupportFragmentManager();//获取fragmentManager
         //通过findFragmentById()方法获取leftFragment
         leftFragment = (LeftFragment) fragmentManager.findFragmentById(R.id.left);
         //获取左侧菜单栏中的控件
@@ -104,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
      * 填充Activity右侧的Fragment，并传递列表数据list
      */
     public void switchData(List<FoodBean> list) {
-        fragmentManager = getFragmentManager();
+        //fragmentManager = getFragmentManager();
+        fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();//开启一个事务
         //通过调用getInstance()方法实例化RightFragment
         rightFragment = new RightFragment().getInstance(list);

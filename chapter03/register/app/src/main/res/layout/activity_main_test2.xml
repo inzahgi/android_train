@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/register_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="注册" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/tvOne"
+                android:drawableTop="@drawable/qq_icon"
+                android:text="用QQ注册" />
+
+
+            <View style="@style/vLine" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/tvOne"
+                android:drawableTop="@drawable/weixin_icon"
+                android:text="用微信注册" />
+
+        </LinearLayout>
+
+        <View style="@style/hLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/email_icon" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/tvTwo"
+                android:text="使用邮箱注册" />
+        </LinearLayout>
+        <View style="@style/hLine" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/tvTwo"
+                android:text="名字" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/etOne"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="" />
+        </LinearLayout>
+
+        <View style="@style/hLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/tvTwo"
+                android:text="邮箱" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/etOne"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <View style="@style/hLine" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/tvTwo"
+                android:text="密码" />
+
+            <EditText
+                android:id="@+id/et_pwd"
+                style="@style/etOne"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <View style="@style/hLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/tvTwo"
+                android:text="性别" />
+
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton"
+                    tools:text="男" />
+
+                <RadioButton
+                    android:id="@+id/rb_girl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton"
+                    tools:text="女" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View style="@style/hLine" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/tvTwo"
+                android:text="请选择兴趣爱好" />
+
+            <CheckBox
+                android:id="@+id/cb_sing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="唱歌" />
+
+            <CheckBox
+                android:id="@+id/cb_dance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="跳舞" />
+
+            <CheckBox
+                android:id="@+id/cb_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="读书" />
+        </LinearLayout>
+        <View style="@style/hLine" />
+
+
+    </LinearLayout>
+
+    <View style="@style/hLine"
+        android:layout_above="@+id/btn_submit"
+        />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@null"
+        android:text="提交"
+
+        />
+
+</RelativeLayout>

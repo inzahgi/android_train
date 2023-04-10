@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 btn_one.setText("按钮1已被点击");
             }
         });
+
         btn_three.setOnClickListener(this);
     }
 
