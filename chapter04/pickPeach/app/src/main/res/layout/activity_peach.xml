@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -11,16 +12,19 @@
         android:text="桃园"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/tree_bg">
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginTop="70dp"
             android:background="@drawable/tree">
+
             <Button
                 android:id="@+id/btn_one"
                 android:layout_width="45dp"
@@ -28,6 +32,7 @@
                 android:layout_marginLeft="85dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/peach_pic" />
+
             <Button
                 android:id="@+id/btn_two"
                 android:layout_width="45dp"
@@ -36,6 +41,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/peach_pic" />
+
             <Button
                 android:id="@+id/btn_three"
                 android:layout_width="45dp"
@@ -45,6 +51,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/btn_two"
                 android:background="@drawable/peach_pic" />
+
             <Button
                 android:id="@+id/btn_four"
                 android:layout_width="45dp"
@@ -53,6 +60,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/peach_pic" />
+
             <Button
                 android:id="@+id/btn_five"
                 android:layout_width="45dp"
@@ -62,6 +70,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@id/btn_four"
                 android:background="@drawable/peach_pic" />
+
             <Button
                 android:id="@+id/btn_six"
                 android:layout_width="45dp"
@@ -72,6 +81,18 @@
                 android:layout_toRightOf="@id/btn_five"
                 android:background="@drawable/peach_pic" />
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_restart"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="150dp"
+            android:background="@drawable/btn_peach"
+            android:text="重新开始"
+            android:textColor="@android:color/black" />
+
         <Button
             android:id="@+id/btn_exit"
             android:layout_width="80dp"
