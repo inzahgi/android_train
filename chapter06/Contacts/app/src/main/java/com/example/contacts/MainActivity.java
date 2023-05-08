@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         if (contactInfos!=null)contactInfos.clear();//清除集合中的数据
         while (cursor.moveToNext()) {
             String id = cursor.getString(
-                    cursor.getColumnIndex(ContactsContract.Contacts._ID));
-            String name = cursor.getString (cursor.getColumnIndex(ContactsContract.
+                    cursor.getColumnIndexOrThrow(ContactsContract.Contacts._ID));
+            String name = cursor.getString (cursor.getColumnIndexOrThrow(ContactsContract.
                     Contacts.DISPLAY_NAME));
-            int isHas = Integer.parseInt(cursor.getString(cursor.getColumnIndex(
+            int isHas = Integer.parseInt(cursor.getString(cursor.getColumnIndexOrThrow(
                     ContactsContract.Contacts.HAS_PHONE_NUMBER)));
             if (isHas > 0) {
                 Cursor c = getContentResolver().query(ContactsContract.
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 while (c.moveToNext()) {
                     ContactInfo info = new ContactInfo();
                     info.setContactName(name);
-                    String number = c.getString(c.getColumnIndex(ContactsContract.
+                    String number = c.getString(c.getColumnIndexOrThrow(ContactsContract.
                             CommonDataKinds.Phone.NUMBER)).trim();
                     number = number.replace(" ", "");
                     number = number.replace("-", "");
