@@ -47,7 +47,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             if(intent.getAction().equals("Open_Rice")){
-                tv_left_content.setVisibility(View.VISIBLE);
+                if(tv_left_content.isShown()) {
+                    tv_left_content.setVisibility(View.INVISIBLE);
+                } else {
+                    tv_left_content.setVisibility(View.VISIBLE);
+                }
                 Log.i("MyBroadcastReceiver", "自定义的广播接收者,接收到了发送开饭信号的广播消息");
             }
             Log.i("MyBroadcastReceiver", intent.getAction());
