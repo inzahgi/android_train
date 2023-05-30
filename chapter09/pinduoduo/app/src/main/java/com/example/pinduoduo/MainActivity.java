@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -14,6 +15,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
+
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int MSG_GOODS_OK = 1; // 获取数据
     private MHandler mHandler;
     // 内网接口
-    public static final String WEB_SITE = "http://172.16.43.20:8080/goods";
+    public static final String WEB_SITE = "http://192.168.100.163:8080/goods";
     // 商品列表接口
     public static final String REQUEST_GOODS_URL = "/goods_list_data.json";
     private RecyclerView rv_list;
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String res = response.body().string(); // 获取商品数据
+                Log.i("PDD", res);
                 Message msg = new Message();
                 msg.what = MSG_GOODS_OK;
                 msg.obj = res;
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call call, IOException e) {
+                e.printStackTrace();
             }
         });
     }
