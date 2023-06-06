@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     private GoodsAdapter adapter;             // 列表的适配器
     public static final int MSG_GOODS_OK = 1; // 获取数据
     private MHandler mHandler;
