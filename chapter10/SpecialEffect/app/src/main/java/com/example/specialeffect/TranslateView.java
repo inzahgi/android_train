@@ -25,7 +25,7 @@ public class TranslateView extends View {
         Paint paint = new Paint();     //创建画笔
         Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.husky);
         Matrix matrix = new Matrix(); //创建一个矩阵
-        //matrix.setTranslate(100,100); //将矩阵向右（X轴）平移100，向下（Y轴）平移100
+        matrix.setTranslate(100,100); //将矩阵向右（X轴）平移100，向下（Y轴）平移100
         canvas.drawBitmap(bitmap, matrix, paint);//将图片按照矩阵的位置绘制到界面上
     }
 }
